@@ -3,16 +3,17 @@
 # required to build the application.
 # Note that this image from Alpine is pulled from Docker Hub, which may
 # limit downloads. If you reach your pull rate limit, try again later.
-FROM node:14.0.0-alpine3.10 AS builder
+FROM docker.io/node:14.0.0-alpine3.10 AS builder
 
 WORKDIR /app
-ADD . /app
+COPY . /app
 
 # Install dependencies
 RUN npm install
 
 # Build our deployable image based on UBI
 FROM registry.access.redhat.com/ubi8/nodejs-14:1-46
+WORKDIR /app
 COPY --from=builder /app .
 
 # Add license file to satisfy requirement for building a certifiable image.
