@@ -29,9 +29,9 @@ CMD [ "npm","start"]
 
 # Add label information that will be associated with our image. This is another
 # requirement for building a certifiable image.
-LABEL name="dev-rh/watson-assistant-slots-intro" \
+LABEL name="dev-rh/pizza-chatbot" \
 vendor="IBM" \
-version="0.0.9" \
+version="0.1.0" \
 release="" \
 summary="Pizza chatbot" \
 description="This chatbot allows users to order pizza."
