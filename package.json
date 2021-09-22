@@ -1,5 +1,5 @@
 {
-  "name": "watson-conversation-slots-intro",
+  "name": "pizza-chatbot",
   "description": "A simple demonstration of Watson Conversation Slots feature.",
   "version": "1.1.0",
   "main": "server.js",
